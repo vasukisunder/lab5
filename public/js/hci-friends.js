@@ -20,8 +20,7 @@ function projectClick(e) { 
     e.preventDefault();
     // In an event handler, $(this) refers to      
     // the object that triggered the event   
-    console.log($(this).text());
-    console.log(e);
+    
     $(this).text(anagrammedName($(this).text()));
 }
 
