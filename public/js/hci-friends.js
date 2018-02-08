@@ -9,7 +9,20 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$("a.name h3").click(projectClick);
+
 	console.log("Javascript connected!");
+}
+
+function projectClick(e) { 
+
+    // prevent the page from reloading      
+    e.preventDefault();
+    // In an event handler, $(this) refers to      
+    // the object that triggered the event   
+    console.log($(this).text());
+    console.log(e);
+    $(this).text(anagrammedName($(this).text()));
 }
 
 function anagrammedName(name) {
